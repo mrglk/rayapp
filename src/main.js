@@ -20,7 +20,7 @@ import Learning from "./views/Learning.vue";
 const pinia = createPinia()
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/rayapp/'),
   routes: [
     { path: "/", name: "Home", component: Home },
     { path: "/learning", name: "Learning", component: Learning },
