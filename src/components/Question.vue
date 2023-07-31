@@ -1,14 +1,12 @@
 <script setup>
 const props = defineProps({
   number: String,
-  done: Boolean,
+  isDone: Boolean,
 });
-
-import { useTestStore } from "../stores/useTestStore";
-const { testData, handleTests } = useTestStore();
 </script>
+
 <template>
-  <button :class="[{ 'Question--active': testData[number] }, 'Question']" @click="handleTests(number)">
+  <button :class="[{ 'Question--active': isDone }, 'Question']">
     <Icon name="question-bg" class="Question__bg" />
     <p class="Question__num">{{ number }}</p>
     <Icon name="check-circle" class="Question__doneMark" />
@@ -27,20 +25,18 @@ const { testData, handleTests } = useTestStore();
   background-color: transparent;
   border: none;
 }
-
 .Question__bg {
   position: absolute;
   width: 79px;
   top: 0;
   left: 0;
 }
-
 .Question__num {
   position: relative;
   z-index: 1;
   font-size: 18px;
+  color: var(--black);
 }
-
 .Question__doneMark {
   display: none;
   position: absolute;
@@ -48,7 +44,6 @@ const { testData, handleTests } = useTestStore();
   right: 3px;
   z-index: 1;
 }
-
 .Question--active .Question__doneMark {
   display: block;
 }

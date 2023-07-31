@@ -5,17 +5,19 @@ const props = defineProps({
   link: String,
 });
 </script>
+
 <template>
-  <a :href="link" class="ExploreLink">
+  <div class="ExploreLink">
     <div class="ExploreLink__iconWrapper">
       <Icon :name="iconName" class="ExploreLink__icon" />
     </div>
     <p class="ExploreLink__title">{{ title }}</p>
-  </a>
+  </div>
 </template>
 
 <style scoped>
 .ExploreLink {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;

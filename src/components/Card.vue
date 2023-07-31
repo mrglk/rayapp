@@ -3,20 +3,21 @@ const props = defineProps({
   iconName: String,
   title: String,
   highlight: Boolean,
-  link: String
 });
 </script>
+
 <template>
-  <a :href="link" :class="[{ 'Card--highlight': highlight }, 'Card']">
+  <div :class="[{ 'Card--highlight': highlight }, 'Card']">
     <div class="Card__iconWrapper">
       <Icon :name="iconName" class="Card__icon" />
     </div>
     <p class="Card__title">{{ title }}</p>
-  </a>
+  </div>
 </template>
 
 <style scoped>
 .Card {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -61,35 +62,34 @@ const props = defineProps({
 
 @media screen and (max-width: 360px) {
   .Card {
-   padding-top: 14px;
-   padding-bottom: 14px;
-}
-.Card__iconWrapper {
-  width: 35px;
-  height: 35px;
-}
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .Card__iconWrapper {
+    width: 35px;
+    height: 35px;
+  }
   .Card__icon {
-  width: 20px;
-}
+    width: 20px;
+  }
 
   .Card__title {
-  font-size: 14px;
+    font-size: 14px;
     line-height: 18px;
   }
 }
 
 @media screen and (max-width: 320px) {
-
-.Card__iconWrapper {
-  width: 25px;
-  height: 25px;
-}
+  .Card__iconWrapper {
+    width: 25px;
+    height: 25px;
+  }
   .Card__icon {
-  width: 15px;
-}
+    width: 15px;
+  }
 
   .Card__title {
-  font-size: 12px;
+    font-size: 12px;
     line-height: 14px;
   }
 }

@@ -1,5 +1,7 @@
 <script setup>
 import { questions } from "../data/questions.json";
+import { useTestStore } from "../stores/useTestStore";
+const { testData, handleQuestion } = useTestStore();
 </script>
 
 <template>
@@ -17,7 +19,7 @@ import { questions } from "../data/questions.json";
     </div>
     <div class="Learning__questions">
       <div v-for="{ id } in questions" class="Learning__question">
-        <Question :number="id" :done="false" />
+        <Question :number="id" :isDone="testData[id]" @click="handleQuestion(id)"/>
       </div>
     </div>
   </div>

@@ -4,30 +4,30 @@
   <section class="NavigationBar">
     <div class="NavigationBar__row">
       <nav class="NavigationBar__links">
-        <a href="#" class="NavigationBar__link NavigationBar__link--active">
+        <div class="NavigationBar__link NavigationBar__link--active">
           <div class="NavigationBar__iconWrapper">
             <Icon name="home" class="NavigationBar__icon" />
           </div>
           <span class="NavigationBar__title">Home</span>
-        </a>
-        <a href="#" class="NavigationBar__link">
+        </div>
+        <div class="NavigationBar__link">
           <div class="NavigationBar__iconWrapper">
             <Icon name="route" class="NavigationBar__icon" />
           </div>
           <span class="NavigationBar__title">Your plan</span>
-        </a>
-        <a href="#" class="NavigationBar__link">
+        </div>
+        <div class="NavigationBar__link">
           <div class="NavigationBar__iconWrapper">
             <Icon name="ranking" class="NavigationBar__icon" />
           </div>
           <span class="NavigationBar__title">Leaderboard</span>
-        </a>
-        <a href="#" class="NavigationBar__link">
+        </div>
+        <div class="NavigationBar__link">
           <div class="NavigationBar__iconWrapper">
             <Icon name="user" class="NavigationBar__icon" />
           </div>
           <span class="NavigationBar__title">Profile</span>
-        </a>
+        </div>
       </nav>
     </div>
   </section>
@@ -53,6 +53,7 @@
 }
 
 .NavigationBar__link {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;

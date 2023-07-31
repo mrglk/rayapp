@@ -4,6 +4,7 @@ import { createPinia } from "pinia";
 
 import "./assets/styles/fonts.css";
 import "./assets/styles/vars.css"
+import "./assets/styles/global.css";
 
 import App from './App.vue'
 import TopBar from "./components/TopBar.vue";
@@ -17,7 +18,7 @@ import Question from "./components/Question.vue";
 import Home from "./views/Home.vue";
 import Learning from "./views/Learning.vue";
 
-const pinia = createPinia()
+const pinia = createPinia();
 
 const router = createRouter({
   history: createWebHistory('/rayapp/'),

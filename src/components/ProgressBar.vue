@@ -1,16 +1,15 @@
 <script setup>
 import { questions } from "../data/questions.json";
 import { useTestStore } from "../stores/useTestStore";
-const { countOfPassedTests, getProgressStep } = useTestStore();
+const { countOfPassedQuestions, progressStep } = useTestStore();
 
-const generateArray = (length) => Array.from({ length }, (_, index) => index + 1);
 </script>
 
 <template>
   <div class="ProgressBar">
-    <p class="ProgressBar__title">{{ countOfPassedTests }} questions out of {{ questions.length }} passed</p>
+    <p class="ProgressBar__title">{{ countOfPassedQuestions }} questions out of {{ questions.length }} passed</p>
     <div class="ProgressBar__line">
-      <div v-for="index in generateArray(7)" :key="index" :class="[{ 'ProgressBar__step--fill': index <= getProgressStep }, 'ProgressBar__step']"></div>
+      <div v-for="index in 7" :key="index" :class="[{ 'ProgressBar__step--fill': index <= progressStep }, 'ProgressBar__step']"></div>
     </div>
   </div>
 </template>
@@ -38,7 +37,6 @@ const generateArray = (length) => Array.from({ length }, (_, index) => index + 1
   border-radius: 5px;
   background-color: var(--green-lite);
 }
-
 .ProgressBar__step--fill {
   background-color: var(--green);
 }
