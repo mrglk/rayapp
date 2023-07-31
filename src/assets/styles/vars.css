@@ -1,0 +1,15 @@
+:root {
+  --white: #ffffff;
+  --white-dirty: #F9F9F9;
+  --black: #2C2D2E;
+  --grey: #87898F;
+  --coral: #FF7355;
+  --coral-lite: #FFE3DD;
+  --purple: #6B2ABC;
+  --purple-lite: rgba(107, 42, 188, 0.1);
+  --red: #FF2045;
+  --red-lite: rgba(255, 32, 69, 0.1);
+  --green: #52A754;
+  --green-lite: rgba(82, 167, 84, 0.1);
+  --generalFont: 'Inter', sans-serif;
+}
